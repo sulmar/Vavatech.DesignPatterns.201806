@@ -1,4 +1,4 @@
-﻿namespace Vavatech.DesignPatterns.StructuralPatterns.Singleton
+﻿namespace Vavatech.DesignPatterns.CreationalPatterns.Singleton
 {
     class Connection
     {

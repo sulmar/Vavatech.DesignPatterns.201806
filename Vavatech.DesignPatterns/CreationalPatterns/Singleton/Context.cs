@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vavatech.DesignPatterns.StructuralPatterns.Singleton
+namespace Vavatech.DesignPatterns.CreationalPatterns.Singleton
 {
 
     class Context

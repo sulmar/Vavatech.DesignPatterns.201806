@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using Vavatech.DesignPatterns.StructuralPatterns.Singleton;
+using Vavatech.DesignPatterns.CreationalPatterns.Prototype;
+using Vavatech.DesignPatterns.CreationalPatterns.Singleton;
 
 namespace Vavatech.DesignPatterns
 {
@@ -11,9 +13,56 @@ namespace Vavatech.DesignPatterns
     {
         static void Main(string[] args)
         {
-            SingletonTests.GenericTest();
+            Create("Vavatech.DesignPatterns.CreationalPatterns.Prototype.Customer");
 
-           // SingletonTests.Test();
+            ReflectionTest();
+
+            // PrototypeTest.CloneTest();
+
+            // SingletonTests.GenericTest();
+
+            // SingletonTests.Test();
+        }
+
+
+        static object Create(string classname)
+        {
+            Type type = Type.GetType(classname);
+
+            var item = Activator.CreateInstance(type);
+
+            return item;
+        }
+
+
+        static void ReflectionTest()
+        {
+            Customer customer = new Customer
+            {
+                Id = 1,
+                Name = "Vavatech"
+            };
+
+
+            Type type = customer.GetType();
+
+            // pobieranie informacji o obiekcie
+            PropertyInfo[] properties = type.GetProperties();
+
+            foreach (var property in properties)
+            {
+                Console.WriteLine($"{property.Name} {property.PropertyType}");
+
+                // odczyt wartości
+                Console.WriteLine(property.GetValue(customer));
+            }
+
+            // ustawianie wartości
+            PropertyInfo propertyName = type.GetProperty("Name");
+            propertyName.SetValue(customer, "Company 1");
+
+
+
         }
     }
 }

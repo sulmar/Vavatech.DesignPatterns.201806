@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Vavatech.DesignPatterns.StructuralPatterns.Singleton
+namespace Vavatech.DesignPatterns.CreationalPatterns.Singleton
 {
     public sealed class LazySingleton<T>
         where T : new()
