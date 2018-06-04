@@ -4,6 +4,8 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using Vavatech.DesignPatterns.BehavioralPatterns.Problem;
+using Vavatech.DesignPatterns.BehavioralPatterns.Strategy;
 using Vavatech.DesignPatterns.CreationalPatterns.Prototype;
 using Vavatech.DesignPatterns.CreationalPatterns.Singleton;
 
@@ -13,9 +15,14 @@ namespace Vavatech.DesignPatterns
     {
         static void Main(string[] args)
         {
-            Create("Vavatech.DesignPatterns.CreationalPatterns.Prototype.Customer");
+            StrategyTests.Test();
 
-            ReflectionTest();
+
+        //    ProblemTests.Test();
+
+            //Create("Vavatech.DesignPatterns.CreationalPatterns.Prototype.Customer");
+
+            //ReflectionTest();
 
             // PrototypeTest.CloneTest();
 

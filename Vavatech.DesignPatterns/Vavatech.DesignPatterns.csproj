@@ -42,6 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BehavioralPatterns\Problem\Order.cs" />
+    <Compile Include="BehavioralPatterns\Strategy\OrderCalculator.cs" />
+    <Compile Include="BehavioralPatterns\TemplateMethod\OrderCalculator.cs" />
+    <Compile Include="CreationalPatterns\Factory\DocumentFactory.cs" />
     <Compile Include="CreationalPatterns\Factory\IDocumentFactory.cs" />
     <Compile Include="CreationalPatterns\Factory\Invoice.cs" />
     <Compile Include="Program.cs" />
@@ -56,7 +60,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BehavioralPatterns\" />
+    <Folder Include="BehavioralPatterns\Decorator\" />
     <Folder Include="StructuralPatterns\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
