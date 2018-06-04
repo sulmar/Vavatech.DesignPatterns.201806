@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Vavatech.DesignPatterns.StructuralPatterns.Singleton;
 
 namespace Vavatech.DesignPatterns
 {
@@ -10,6 +11,9 @@ namespace Vavatech.DesignPatterns
     {
         static void Main(string[] args)
         {
+            SingletonTests.GenericTest();
+
+           // SingletonTests.Test();
         }
     }
 }
