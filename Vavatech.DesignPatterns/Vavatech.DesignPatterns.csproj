@@ -42,12 +42,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BehavioralPatterns\Command\CommandSample.cs" />
     <Compile Include="BehavioralPatterns\Problem\Order.cs" />
+    <Compile Include="BehavioralPatterns\Strategy\BetterOrderCalculator.cs" />
     <Compile Include="BehavioralPatterns\Strategy\OrderCalculator.cs" />
     <Compile Include="BehavioralPatterns\TemplateMethod\OrderCalculator.cs" />
     <Compile Include="CreationalPatterns\Factory\DocumentFactory.cs" />
     <Compile Include="CreationalPatterns\Factory\IDocumentFactory.cs" />
     <Compile Include="CreationalPatterns\Factory\Invoice.cs" />
+    <Compile Include="CreationalPatterns\FluentApi\Radio.cs" />
+    <Compile Include="DateTimeHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="CreationalPatterns\Prototype\Invoice.cs" />
@@ -55,13 +59,19 @@
     <Compile Include="CreationalPatterns\Singleton\Context.cs" />
     <Compile Include="CreationalPatterns\Singleton\LazySingleton.cs" />
     <Compile Include="CreationalPatterns\Singleton\GenericSingleton.cs" />
+    <Compile Include="StructuralPatterns\Adapter\IRadio.cs" />
+    <Compile Include="StructuralPatterns\Decorator\IDiscount.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BehavioralPatterns\Decorator\" />
-    <Folder Include="StructuralPatterns\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="input.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

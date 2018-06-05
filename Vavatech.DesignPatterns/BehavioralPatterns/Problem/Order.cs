@@ -54,6 +54,9 @@ namespace Vavatech.DesignPatterns.BehavioralPatterns.Problem
         public IList<OrderDetail> Details { get; set; }
         public decimal TotalAmount => Details.Sum(d => d.Amount);
 
+
+        // public decimal DiscountAmount { get; set; }
+
         public Order()
         {
             OrderDate = DateTime.Now;

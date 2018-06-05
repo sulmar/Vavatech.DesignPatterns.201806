@@ -4,10 +4,14 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using Vavatech.DesignPatterns.BehavioralPatterns.Command;
 using Vavatech.DesignPatterns.BehavioralPatterns.Problem;
 using Vavatech.DesignPatterns.BehavioralPatterns.Strategy;
+using Vavatech.DesignPatterns.CreationalPatterns.FluentApi;
 using Vavatech.DesignPatterns.CreationalPatterns.Prototype;
 using Vavatech.DesignPatterns.CreationalPatterns.Singleton;
+using Vavatech.DesignPatterns.StructuralPatterns.Adapter;
+using Vavatech.DesignPatterns.StructuralPatterns.Decorator;
 
 namespace Vavatech.DesignPatterns
 {
@@ -15,7 +19,21 @@ namespace Vavatech.DesignPatterns
     {
         static void Main(string[] args)
         {
-            StrategyTests.Test();
+            DateTimeTests.Test();
+
+            FluentApiTests.Test();
+
+            AdapterTests.Test();
+
+            CommandTests.Test();
+
+            DecoratorTests.StreamTest();
+
+            DecoratorTests.Test();
+
+            // BehavioralPatterns.Strategy.Better.StrategyTests.Test();
+
+            // StrategyTests.Test();
 
 
         //    ProblemTests.Test();
