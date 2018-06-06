@@ -5,6 +5,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using Vavatech.DesignPatterns.BehavioralPatterns.Command;
+using Vavatech.DesignPatterns.BehavioralPatterns.Observer;
 using Vavatech.DesignPatterns.BehavioralPatterns.Problem;
 using Vavatech.DesignPatterns.BehavioralPatterns.State;
 using Vavatech.DesignPatterns.BehavioralPatterns.StateMachine;
@@ -21,6 +22,10 @@ namespace Vavatech.DesignPatterns
     {
         static void Main(string[] args)
         {
+            AdapterTests.Test();
+
+            ObserverTests.Test();
+
             StateMachineTests.LampTest();
 
 

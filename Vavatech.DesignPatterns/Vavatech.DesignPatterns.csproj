@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BehavioralPatterns\Command\CommandSample.cs" />
+    <Compile Include="BehavioralPatterns\Observer\Subject.cs" />
     <Compile Include="BehavioralPatterns\Problem\Order.cs" />
     <Compile Include="BehavioralPatterns\Repository\Customer.cs" />
     <Compile Include="BehavioralPatterns\StateMachine\Lamp.cs" />

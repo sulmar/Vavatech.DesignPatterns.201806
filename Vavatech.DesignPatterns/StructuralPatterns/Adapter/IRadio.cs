@@ -43,13 +43,18 @@ namespace Vavatech.DesignPatterns.StructuralPatterns.Adapter
         void Send(string to, string body);
     }
 
-    class MotorolaAdapter : IRadio
+    class MotorolaAdapter : IRadio, IDisposable
     {
         private readonly Motorola adaptee;
 
         public MotorolaAdapter()
         {
             adaptee = new Motorola();
+        }
+
+        public void Dispose()
+        {
+            adaptee.Release();
         }
 
         public void Send(string to, string body)
@@ -81,11 +86,17 @@ namespace Vavatech.DesignPatterns.StructuralPatterns.Adapter
     {
         public static void Test()
         {
-            IRadio radio = new MotorolaAdapter();
-            radio.Send("marcin", "Hello World!");
+            using (MotorolaAdapter radio = new MotorolaAdapter())
+            {
+                radio.Send("marcin", "Hello World!");
 
-            radio = new HyteraAdapter();
-            radio.Send("bartek", "Hello Bartek");
+                //radio = new HyteraAdapter();
+                //radio.Send("bartek", "Hello Bartek");
+
+            }
+
+
+
         }
     }
 
