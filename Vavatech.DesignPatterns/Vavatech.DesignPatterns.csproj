@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Stateless, Version=4.0.0.0, Culture=neutral, PublicKeyToken=93038f0927583c9a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stateless.4.2.1\lib\net45\Stateless.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,6 +47,9 @@
   <ItemGroup>
     <Compile Include="BehavioralPatterns\Command\CommandSample.cs" />
     <Compile Include="BehavioralPatterns\Problem\Order.cs" />
+    <Compile Include="BehavioralPatterns\Repository\Customer.cs" />
+    <Compile Include="BehavioralPatterns\StateMachine\Lamp.cs" />
+    <Compile Include="BehavioralPatterns\State\Order.cs" />
     <Compile Include="BehavioralPatterns\Strategy\BetterOrderCalculator.cs" />
     <Compile Include="BehavioralPatterns\Strategy\OrderCalculator.cs" />
     <Compile Include="BehavioralPatterns\TemplateMethod\OrderCalculator.cs" />
@@ -64,9 +70,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BehavioralPatterns\Decorator\" />
+    <Folder Include="BehavioralPatterns\Repository\SearchCriteria\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="input.txt">

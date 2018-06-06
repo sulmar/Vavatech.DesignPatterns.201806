@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Vavatech.DesignPatterns.BehavioralPatterns.Command;
 using Vavatech.DesignPatterns.BehavioralPatterns.Problem;
+using Vavatech.DesignPatterns.BehavioralPatterns.State;
+using Vavatech.DesignPatterns.BehavioralPatterns.StateMachine;
 using Vavatech.DesignPatterns.BehavioralPatterns.Strategy;
 using Vavatech.DesignPatterns.CreationalPatterns.FluentApi;
 using Vavatech.DesignPatterns.CreationalPatterns.Prototype;
@@ -19,6 +21,11 @@ namespace Vavatech.DesignPatterns
     {
         static void Main(string[] args)
         {
+            StateMachineTests.LampTest();
+
+
+            StateTests.Test();
+
             DateTimeTests.Test();
 
             FluentApiTests.Test();
